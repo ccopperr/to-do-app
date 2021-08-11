@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+$list-bg: #9999996c;
+
+$button-bg: #0084ff;
+$button-color: #fff;
+
+$body-bg: rgb(214, 214, 214);
+
+$list-color: lighten(#000, 5%);
+
+body {
+    font: {
+        family: 'Roboto', sans-serif;
+        size: 1.2rem;
+    }
+    background-color: $body-bg;
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to-list {
+    display: flex;
+    flex-direction: column;
+}
+
+#list {
+    background-color: $list-bg;
+    border-radius: 15px;
+    padding: 1rem 2.5rem;
+    font: {
+        size: 1rem;
+
+    }
+    color: $list-color;
+
+    li {
+        cursor: pointer;
+    }
+
+    li.checked {
+        text-decoration: line-through;
+        color: lighten($list-color, 60%);
+    }
+
+    li:not(:first-child) {
+        margin-top: .5rem;
+    }
+}
+
+#add-textinput {
+    padding: .4rem .2rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid darken($body-bg, 20%);
+}
+
+#add-button {
+    padding: .25rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    background-color: $button-bg;
+    color: $button-color;
+    margin-top: 1rem;
+    font: {
+        family: 'Roboto', sans-serif;
+        weight: medium;
+        size: 1rem;
+    }
+
+    &:hover {
+        background-color: lighten($button-bg, 10%);
+    }
+}
